@@ -9,7 +9,7 @@
 // 4, gmartinson3@illinois.edu, Gannie, M
 // 5, adaine5@samsung.com, Antonietta, F
 
-// Example format of an intern object: 1, examples@you.edu, Example, F --sample
+// Example format of an intern object: 1, examples@you.edu, Example, F --sam
 const example = {
   id: 0,
   name: "Example",
@@ -19,26 +19,62 @@ const example = {
 
 // Write your intern objects here:
 
+let Mitzi = {'id': 1, 
+'email': 'mmelloy0@psu.edu',
+'name': 'Mitzi',
+'gender':'F' }
+
+let Kennan = { 'id':2,
+ 'email': 'kdiben1@tinypic.com',
+ 'name': 'Kennan',
+ 'gender':'M' }
+
+let Keven = {'id':3,
+ 'email':'kmummery2@wikimedia.org',
+ 'name':'Keven',
+ 'gender': 'M'}
+
+let Gannie = {'id':'4',
+ 'email': 'gmartinson3@illinois.edu',
+ 'name': 'Gannie',
+ 'gender': 'M'}
+
+let Antonietta = {'id':'5',
+ 'email':'adaine5@samsung.com',
+ 'name':'Antonietta',
+ 'gender':'F' }
+
 
 // ==== Challenge 2: Reading Object Data ==== 
 // Once your objects are created, log out the following requests from HR into the console:
 
 // Mitzi's name
-
+  console.log(Mitzi.name);
 // Kennan's ID
-
+  console.log(Kennan.name);
 // Keven's email
-
+  console.log(Keven.name);
 // Gannie's name
-
+  console.log(Gannie.name);
 // Antonietta's Gender
 
 // ==== Challenge 3: Object Methods ==== 
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
 // console.log(kennan.speak());
 
+Kennan.speak = function(){
+  return 'Hello, my name is Kennan!';
+}
+console.log(kennan.speak());
+
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
 //console.log(antonietta.multiplyNums(3,4));
+
+Antonietta.multiplyNums = function(oneNum, twoNum){
+  return oneNum * twoNum;
+}
+
+console.log(Antonietta.multiplyNums(3,4));
 
 // === Great work! === Head over to the the arrays.js. You may come back and attempt the Stretch Challenge once you have completed the challenges in arrays.js and function-conversion.js.
 
@@ -52,13 +88,21 @@ const example = {
 const parent = {}
 
 // Log the parent object's name
-
+const parent = {"name":"Susan","age":70};
 // Log the child's age
-
+parent.child = {"name":"George","age":50};
 // Log the name and age of the grandchild
-
+parent.child.grandchild = {"name":"Sam","age":30};
 // Have the parent speak
-
+const parent = {}
+parent.Speak = function(){
+  return this.name;
+}
 // Have the child speak
-
+parent.child.Speak = function(){
+  return this.name;
+}
 // Have the grandchild speak
+parent.child.grandchild.Speak = function(){
+  return this.name;
+}
